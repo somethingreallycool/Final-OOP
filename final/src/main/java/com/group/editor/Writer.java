@@ -14,10 +14,16 @@ public class Writer {
     Constant c = new Constant();
     Reader rd = new Reader();
 
+
+    //Append new employee, return if employee is successfully appended
+    //New employee must have a ID or Email that does not match any other existing ones
+    //Else, return false
     public boolean append(Employee employee){
         String[] info = employee.getAll();
-
-        if(rd.validData(info[c.ID], c.ID) & rd.validData(info[c.EMAIL], c.EMAIL)){
+        System.out.println(rd.validData(info[c.ID], c.ID));
+        System.out.println(rd.validData(info[c.EMAIL], c.EMAIL));
+        if(!rd.validData(info[c.ID], c.ID) & !rd.validData(info[c.EMAIL], c.EMAIL)){
+            
             try {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(c.PATH, true));
                 bw.write("\n");
@@ -37,6 +43,11 @@ public class Writer {
             return false;
         }
     }
+
+
+    //Replace/Update data of an employee
+    //First, the code check for ID of the employee
+    //Then, it check if the email is a valid one (either email is unedited or email is edited to a new email to the database)
     public boolean replace(Employee employee){
         String[] newInfo = employee.getAll();
         File DB = new File(c.PATH);
@@ -80,6 +91,8 @@ public class Writer {
         return false;
     }
 
+    //delete employee from the database
+    //use ID to check for the employee
     public boolean delete(Employee employee) {
         String ID = employee.getID();
         File DB = new File(c.PATH);

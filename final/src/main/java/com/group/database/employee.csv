@@ -1,9 +1,11 @@
 ID NUMBER, CONTACT EMAIL, FULL NAME, POSITION TITLE, BIRTHDATE, COMPENSATION, PASSWORD
-0001, john.doe@clinic.com, John McClain Doe, Chief of Residency, 18/10/1970, 3000000, 123
-0002, jane.smith@clinic.com, Jane Smith, Surgeon, 4/5/1980, 500000, 123
-0003, john.smith@clinic.com, Alfred Pennyworth, Surgeon, 4/2/1980, 500000, somethingsecure
-0004, mary.sue.med@clinic.com, Mary Sue, Resident, 17/10/1975, 100000, 123
-0020, mary.sue.ac@clinic.com, Mary Sue, Accountant, 1/7/1985, 75000, 123
-0006, eve@clinic.com, Eve Moneypenny, Surgeon, 1/1/1950, 150000, 123
-0007, ricci.flow@clinic.com, Gregoric Perelman, Radiologist, 1/2/1950, 15000, 123
-0010, quan.chu@clinic.com, something, something, something, something, something
+0001, john.doe@clinic.com, John Doe, Chief of Residency, 18/10/1970, $3000000, NA
+0002, jane.smith@clinic.com, Jane Smith, Chief of Cardiac, 4/5/1980, $1000000, 123
+0003, alfred.pennyworth@clinic.com, Alfred Pennyworth, Chief of Surgeory, 4/2/1980, %1500000, somethingsecure
+0004, mary.sue.med@clinic.com, Mary Sue, Resident, 17/10/1975, $100000, NA
+0020, mary.sue.ac@clinic.com, Mary Sue, Accountant, 1/7/1985, $75000, 123
+0006, eve@clinic.com, Eve Moneypenny, Chief if Neurourgeory, 1/1/1950, $150000, 123
+0007, ricci.flow@clinic.com, Gregoric Perelman, Radiologist, 1/2/1950, $150000, NA
+0010, quan.chu@clinic.com, Quan Chu, Chief Executive Officer, None of your business, A crapload of money, epstein is alive
+1, email, name, title, birthdate, compensation, NA
+0100, something, something, something, something, something, NA

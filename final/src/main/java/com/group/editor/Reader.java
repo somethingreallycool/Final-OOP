@@ -14,6 +14,8 @@ import com.group.data.Employee;
 public class Reader {
     private Constant c = new Constant();
 
+
+    //Return all of the employees
     public ArrayList<Employee> print(){
         ArrayList<Employee> list = new ArrayList<Employee>();
         try {
@@ -33,6 +35,9 @@ public class Reader {
         return list;
     }
 
+
+    //Search for employee that match sample data
+    //Return a Array List of employees that match the criteria
     public ArrayList<Employee> search(String sampleData, int dataType){
         ArrayList<Employee> matches = new ArrayList<Employee>();
         try {
@@ -55,14 +60,16 @@ public class Reader {
         return matches;
     }
 
-    //apply for ID and Email to check if sampleData is in the database, return true if no --> this function is used to work with writer to append new data
-    //A user/employee must have unique ID and Email
-    //ID is a must for every employee thus, it cannot be empty
+    //Check if ID or Email is valid
+    //ID is valid if it is in the database and not empty i.e "" --> ID is used to identify user, thus cannot be missing
+    //Email is valid if it is in the database or it's empty ""
     public boolean validData(String sampleData, int dataType){
-        if (sampleData == "") {
+        if (sampleData.equals("")) {
             if (dataType == c.ID) {
+                return true;
+            } else {
                 return false;
-            } 
+            }
         }
         try {
             BufferedReader br = new BufferedReader(new FileReader(c.PATH));

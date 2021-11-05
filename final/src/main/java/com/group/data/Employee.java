@@ -71,6 +71,9 @@ public class Employee {
         Password = newPassword;
     }
     public boolean validPassword(String enteredPassword){
+        if(Password.equals("NA")) {
+            return false;
+        }
         return Password.equals(enteredPassword);
     }
 }
